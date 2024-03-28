@@ -7,7 +7,7 @@ def setup_GPIO():
 	
 	GPIO.setmode(GPIO.BCM)
 	GPIO.setup(flow_sensor_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-	GPIO.add_event_detect(flow_sensor_pin, GPIO.FALLING, callback=countPulse)
+	GPIO.add_event_detect(flow_sensor_pin, GPIO.FALLING, callback=countPulse) #This is where the error occurs
 	
 def clean_GPIO():
 	GPIO.remove_event_detect(flow_sensor_pin)
